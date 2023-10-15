@@ -1,7 +1,21 @@
 <testgen-seven-global-header
-  (sideNavToggle)="sideNavToggle()"
+  (sidenavtoggle)="sideNavToggle()"
 ></testgen-seven-global-header>
 <div class="wrapper">
-  <div class="container"></div>
+  <div class="container">
+    <testgen-seven-global-sidenav [opened]="sideNavOpen">
+      <mat-nav-list sidenav="">
+        <a
+          mat-list-item=""
+          routerlinkactive="active-link"
+          routerlink="/"
+          (click)="sideNavToggle()"
+        >
+          <span class="App__sidenav-text">Home</span>
+        </a>
+      </mat-nav-list>
+      <router-outlet></router-outlet>
+    </testgen-seven-global-sidenav>
+  </div>
 </div>
 <testgen-seven-global-footer> </testgen-seven-global-footer>
